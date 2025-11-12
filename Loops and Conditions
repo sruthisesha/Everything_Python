@@ -1,0 +1,47 @@
+# While Loop 
+
+"""
+while-loop: We can provide the condition, and we can execute the loop till that condition is true.
+"""
+
+print("While loop example")
+print("-"*20)
+# ---------------
+
+x = 0
+while x < 5:
+    print("Value of x is:", x)
+    x += 1
+
+print("#"*40, end="\n\n")
+############################
+
+print("'break-statement:' we can end while-loop manually")
+print("-"*20)
+# ---------------
+
+# End while-loop after getting value 'perl'
+
+my_list = ["Java", "python", "perl", "C", "C++"]
+print("my_list", my_list, end="\n\n")
+
+index_no = 0
+while index_no < len(my_list):
+    j = my_list[index_no]
+    index_no += 1
+    print("Each Value is:", j)
+    if j == "perl":
+        print("\nGot Value 'Perl', so manually ending for-loop using 'break-statement'")
+        break
+
+
+# Using for-loop
+# 
+# for j in my_list:
+#     print("Each Value is:", j)
+#     if j == "perl":
+#         print("\nGot Value 'Perl', so manually ending for-loop using 'break-statement'")
+#         break
+
+print("#"*40, end="\n\n")
+############################
