@@ -1,47 +1,64 @@
-# While Loop 
-
-"""
-while-loop: We can provide the condition, and we can execute the loop till that condition is true.
-"""
-
-print("While loop example")
+print("'continue-statement:' we can skip current iteration and send it to next iteration")
 print("-"*20)
 # ---------------
 
-x = 0
-while x < 5:
-    print("Value of x is:", x)
-    x += 1
+# Value perl is not required to process, so we can skip iteration if value is 'Perl'
 
-print("#"*40, end="\n\n")
-############################
-
-print("'break-statement:' we can end while-loop manually")
-print("-"*20)
-# ---------------
-
-# End while-loop after getting value 'perl'
-
-my_list = ["Java", "python", "perl", "C", "C++"]
+my_list = ["Java", "perl", "python", "perl", "C", "perl", "C++"]
 print("my_list", my_list, end="\n\n")
 
 index_no = 0
 while index_no < len(my_list):
     j = my_list[index_no]
     index_no += 1
-    print("Each Value is:", j)
     if j == "perl":
-        print("\nGot Value 'Perl', so manually ending for-loop using 'break-statement'")
-        break
+        print("\nGot Value 'Perl', so skipping current iteration and sending it to next iteration using 'continue-statement'\n")
+        continue
+    print("Each Value is:", j)
 
+# USING for-loop
 
-# Using for-loop
-# 
 # for j in my_list:
-#     print("Each Value is:", j)
 #     if j == "perl":
-#         print("\nGot Value 'Perl', so manually ending for-loop using 'break-statement'")
+#         print("\nGot Value 'Perl', so skipping current iteration and sending it to next iteration using 'continue-statement'\n")
+#         continue
+#     print("Each Value is:", j)
+
+print("#"*40, end="\n\n")
+############################
+
+print("USING 'while-else' block")
+print("-"*20)
+# ---------------
+
+my_list = ["Java", "perl", "python-1", "perl", "python-2", "C", "python-3", "perl", "C++"]
+print("my_list", my_list, end="\n\n")
+
+# Requirement,
+# - check are there any python course
+# - print 'found' or 'not-found'.
+# - if one value found then it is found. so no need to verify value
+
+index_no = 0
+while index_no < len(my_list):
+    j = my_list[index_no]
+    index_no += 1
+    if j.startswith("python"):
+        print("course FOUND")
+        break
+else:
+    print("course NOT FOUND")
+
+# USING for-loop
+
+# for j in my_list:
+#     if j.startswith("python"):
+#         print("course FOUND")
 #         break
+# else:
+#     print("course NOT FOUND")
+
+# after completing the while-loop, 'while-else' block will execute
 
 print("#"*40, end="\n\n")
 ############################
